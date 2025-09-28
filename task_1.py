@@ -2,10 +2,11 @@ str = input("Введите текст: ")
 words = str.split( )
 dct = {}
 for word in words:
-    if word in dct:
-        dct[word] += 1
+    fix_word = word.lower()
+    if fix_word in dct:
+        dct[fix_word] += 1
     else:
-        dct[word] = 1
+        dct[fix_word] = 1
 print("Сколько раз встречается каждое слово: ")
 print(dct)
 uniq_word = len(dct)
