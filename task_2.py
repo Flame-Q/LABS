@@ -1,7 +1,7 @@
 num = input("Введите числа через пробел: ")
 num = num.split()
-
 nums = []
+
 for n in num:
     if '.' in n:
         nums.append(float(n))
