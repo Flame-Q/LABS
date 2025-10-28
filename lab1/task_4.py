@@ -10,9 +10,9 @@ sum = sum % 5
 nominal_2 = sum // 2
 sum = sum % 2
 nominal_1 = sum // 1
-print("Купюр по 100:", nominal_100)
-print("Купюр по 50:", nominal_50)
-print("Купюр по 10:", nominal_10)
-print("Купюр по 5:", nominal_5)
-print("Купюр по 2:", nominal_2)
-print("Купюр по 1:", nominal_1)
+print(f"Купюр по 100: {nominal_100}")
+print(f"Купюр по 50: {nominal_50}")
+print(f"Купюр по 10: {nominal_10}")
+print(f"Купюр по 5: {nominal_5}")
+print(f"Купюр по 2: {nominal_2}")
+print(f"Купюр по 1: {nominal_1}")
