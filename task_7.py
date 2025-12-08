@@ -1,6 +1,6 @@
-s = input()
+s = input("Напишите строку (например 'aaaabbbccaff'): ")
 
-res = ""
+result = ""  
 symb = s[0]
 count = 1
     

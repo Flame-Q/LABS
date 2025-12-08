@@ -7,23 +7,34 @@ for n in num:
         nums.append(float(n))
     else:
         nums.append(int(n))
-
-print("1. Уникальные числа:", list(set(nums)))
-
+        
 rnum = []
 for n in nums:
     if nums.count(n) > 1 and n not in rnum:
         rnum.append(n)
 print("2. Повторяющиеся числа:", rnum)
 
+unique_nums = [n for n in nums if n not in rnum]
+print("1. Уникальные числа:", unique_nums)
+
 even = []
 odd = []
+odd_processed = []
+
 for n in nums:
-    is_even = (n % 2 == 0)
-    if is_even:
+    if isinstance(n, float):
+        continue
+    
+    if n % 2 == 0:
         even.append(n)
     else:
-        odd.append(n)
+        if n in rnum:
+            if n not in odd_processed:
+                odd.append(n)
+                odd_processed.append(n)
+        else:
+            odd.append(n)
+
 print("3. Четные числа:", even)
 print("   Нечетные числа:", odd)
 
@@ -41,12 +52,11 @@ for n in nums:
         floats.append(n)
 print("5. Числа с плавающей точкой:", floats)
 
-sum = 0
+sum_kr = 0
 for n in nums:
-    is_kr = (n % 5 == 0)
-    if is_kr:
-        sum += n
-print("6. Сумма чисел, кратных 5:", sum)
+    if n % 5 == 0:
+        sum_kr += n
+print("6. Сумма чисел, кратных 5:", sum_kr)
 
 print("7. Самое большое число:", max(nums))
 print("8. Самое маленькое число:", min(nums))
